@@ -1,0 +1,54 @@
+{
+  "name": "@signforge/mcp-server",
+  "version": "1.2.1",
+  "description": "SignForge MCP Server — Send documents for e-signature from Claude Desktop, Claude Code, Cursor, and other AI agents",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-server": "./dist/index.js",
+    "signforge-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "signforge",
+    "mcp",
+    "model-context-protocol",
+    "e-signature",
+    "esignature",
+    "claude-desktop",
+    "claude-code",
+    "cursor",
+    "ai-agent",
+    "pdf-signing",
+    "docusign-alternative",
+    "document-signing"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kumarprobeops/signforge-mcp.git"
+  },
+  "homepage": "https://signforge.io",
+  "bugs": {
+    "url": "https://github.com/kumarprobeops/signforge-mcp/issues"
+  },
+  "author": "SignForge <support@signforge.io> (https://signforge.io)",
+  "mcpName": "io.github.kumarprobeops/signforge",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
