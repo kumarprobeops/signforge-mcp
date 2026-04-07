@@ -1,0 +1,24 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      SIGNFORGE_API_KEY:
+        type: string
+        description: "Your SignForge API key"
+      SIGNFORGE_API_URL:
+        type: string
+        description: "API base URL"
+        default: "https://signforge.io/api/v1"
+    required:
+      - SIGNFORGE_API_KEY
+  commandFunction:
+    |-
+    (config) => ({
+      command: "npx",
+      args: ["-y", "@signforge/mcp-server"],
+      env: {
+        SIGNFORGE_API_KEY: config.SIGNFORGE_API_KEY,
+        ...(config.SIGNFORGE_API_URL ? { SIGNFORGE_API_URL: config.SIGNFORGE_API_URL } : {})
+      }
+    })

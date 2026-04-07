@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "SIGNFORGE_API_KEY": {
+      "type": "string",
+      "description": "Your SignForge API key. Get one at https://signforge.io/dashboard/developers"
+    },
+    "SIGNFORGE_API_URL": {
+      "type": "string",
+      "description": "API base URL (default: https://signforge.io/api/v1). Only change for self-hosted.",
+      "default": "https://signforge.io/api/v1"
+    }
+  },
+  "required": ["SIGNFORGE_API_KEY"]
+}
