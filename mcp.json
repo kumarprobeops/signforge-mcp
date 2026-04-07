@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "signforge": {
+      "command": "npx",
+      "args": ["-y", "@signforge/mcp-server"],
+      "env": {
+        "SIGNFORGE_API_KEY": ""
+      }
+    }
+  }
+}
